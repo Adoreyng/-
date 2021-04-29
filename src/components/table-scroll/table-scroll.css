@@ -1,0 +1,130 @@
+.table-scroll .el-form-item {
+  height: 30px;
+  margin-bottom: 0;
+}
+.table-scroll .el-form-item .el-input__icon {
+  line-height: 30px;
+}
+.table-scroll .el-form-item .el-form-item__content {
+  line-height: 30px;
+}
+.table-scroll .el-form-item .el-form-item__content .el-input__inner {
+  width: 300px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 0;
+  background-color: transparent;
+  color: #8d93a0;
+  border-color: #466288;
+}
+.table-scroll .el-table,
+.table-scroll .el-table__expanded-cell {
+  background-color: transparent;
+}
+.table-scroll .el-input__inner {
+  background-color: #0a5187;
+  color: #e1eaff;
+}
+.table-scroll .el-table .el-table__row {
+  cursor: pointer;
+}
+.table-scroll .el-table .cell {
+  width: 100%;
+  padding: 2px 20px;
+  box-sizing: border-box;
+  text-align: left;
+  float: left;
+}
+.table-scroll .el-table th > .cell {
+  font-size: 15px;
+}
+.table-scroll .el-table .active-name .cell {
+  width: 100%;
+  padding: 2px 20px;
+  box-sizing: border-box;
+}
+.table-scroll .el-table .active-name .cell div {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+  color: #d3ddf6;
+}
+.table-scroll .el-table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e1eaff;
+  border: none;
+}
+.table-scroll .el-table tr {
+  color: #e1eaff;
+  border: none;
+}
+.table-scroll .el-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.table-scroll .el-table tr:nth-child(even):hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.table-scroll .el-table tr:nth-child(odd) {
+  background-color: rgba(24, 55, 97, 0.1);
+}
+.table-scroll .el-table tr:nth-child(odd):hover {
+  background-color: rgba(24, 55, 97, 0.9);
+}
+.table-scroll .el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: transparent;
+}
+.table-scroll .el-table td,
+.table-scroll .el-table th.is-leaf {
+  border: none;
+}
+.table-scroll .el-table--border::after,
+.table-scroll .el-table--group::after,
+.table-scroll .el-table::before {
+  content: "";
+  position: absolute;
+  background-color: #05225b;
+  z-index: 1;
+}
+.table-scroll .el-table tr:hover {
+  color: #e1eaff;
+}
+.table-scroll .el-table::before {
+  height: 0;
+}
+.table-scroll .el-table__body {
+  width: 100% !important;
+}
+.table-scroll .el-table__body-wrapper.is-scrolling-none::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.table-scroll .el-table__body-wrapper.is-scrolling-none::-webkit-scrollbar-track {
+  background: #1e427a;
+  border-radius: 0;
+}
+.table-scroll .el-table__body-wrapper.is-scrolling-none::-webkit-scrollbar-thumb {
+  background: #265480;
+  border-radius: 0;
+}
+.table-scroll .el-table__body-wrapper.is-scrolling-none::-webkit-scrollbar-thumb:hover {
+  background: #071d3f;
+}
+.table-scroll .el-table__body-wrapper.is-scrolling-none::-ms-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.table-scroll .el-table__body-wrapper.is-scrolling-none::-ms-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+.table-scroll .el-table__body-wrapper.is-scrolling-none::-ms-scrollbar-thumb {
+  background: #c9c9ca;
+  border-radius: 8px;
+}
+.table-scroll .el-table__body-wrapper.is-scrolling-none::-ms-scrollbar-thumb:hover {
+  background: #a2a2a3;
+}

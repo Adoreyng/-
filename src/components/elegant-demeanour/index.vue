@@ -74,11 +74,13 @@ export default {
         pageNum: 1,
         pageSize: 10,
         type: 3,
+        // type: 1,
         sortBy: 'createTime',
         sortType: 'desc',
       }
       let res = await this.request(`${JUDICIAL_BACKEND}/judicial/activities`, 'get', data)
       this.infoData = res.list
+      console.log(res)
     }
   },
 }

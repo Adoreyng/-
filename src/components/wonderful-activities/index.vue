@@ -30,14 +30,14 @@ export default {
     return {
       swiper: null,
       activeImg: '',
-      infoData: [],
-      // infoData: [
-      //   {type: 1, id: 6, icon: require('../../assets/images/home/w-active1.jpg'), name: '金山检察法治副校长带你宣誓成人', createTime: '2021-02-23'},
-      //   {type: 1, id: 7, icon: require('../../assets/images/home/w-active2.jpg'), name: '法进医院、尊重医护、法治同行', createTime: '2021-03-15'},
-      //   {type: 1, id: 8, icon: require('../../assets/images/home/w-active3.jpg'), name: '谁执法谁普法', createTime: '2021-03-27'},
-      //   {type: 1, id: 9, icon: require('../../assets/images/home/w-active4.jpg'), name: '提振消费信心市场监管执法普法 ', createTime: '2021-03-30'},
-      //   {type: 1, id: 10, icon: require('../../assets/images/home/w-active5.jpg'), name: '宝山区司法局局长走进大场中学 ', createTime: '2021-04-05'},
-      // ]
+      // infoData: [],
+      infoData: [
+        {type: 1, id: 6, icon: require('../../assets/images/home/w-active1.jpg'), name: '金山检察法治副校长带你宣誓成人', createTime: '2021-02-23'},
+        {type: 1, id: 7, icon: require('../../assets/images/home/w-active2.jpg'), name: '法进医院、尊重医护、法治同行', createTime: '2021-03-15'},
+        {type: 1, id: 8, icon: require('../../assets/images/home/w-active3.jpg'), name: '谁执法谁普法', createTime: '2021-03-27'},
+        {type: 1, id: 9, icon: require('../../assets/images/home/w-active4.jpg'), name: '提振消费信心市场监管执法普法 ', createTime: '2021-03-30'},
+        {type: 1, id: 10, icon: require('../../assets/images/home/w-active5.jpg'), name: '宝山区司法局局长走进大场中学 ', createTime: '2021-04-05'},
+      ]
     }
   },
   created() {
@@ -79,15 +79,15 @@ export default {
     },
     // 获取首屏数据
     async initData(){
-      let data = {
-        pageNum: 1,
-        pageSize: 20,
-        sortBy: 'createTime',
-        sortType: 'desc',
-      }
-      let res = await this.request(`${JUDICIAL_BACKEND}/judicial/activities`, 'get', data)
-      this.infoData = res.list
-      // this.activeImg = this.infoData[3].icon
+      // let data = {
+      //   pageNum: 1,
+      //   pageSize: 20,
+      //   sortBy: 'createTime',
+      //   sortType: 'desc',
+      // }
+      // let res = await this.request(`${JUDICIAL_BACKEND}/judicial/activities`, 'get', data)
+      // this.infoData = res.list
+      this.activeImg = this.infoData[3].icon
     }
   }
 }

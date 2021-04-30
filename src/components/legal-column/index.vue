@@ -238,43 +238,45 @@ export default {
       }
     },
     // 获取七五普法专栏首屏数据
-    async initDataList1() {
-      let data = {
-        pageNum: 1,
-        pageSize: 10,
-        type: 2,
-        sortBy: "createTime",
-        sortType: "desc"
-      };
-      let res = await this.request(
-        `${JUDICIAL_BACKEND}/judicial/activities`,
-        "get",
-        data
-      );
-      this.dataList1 = res.list;
-      this.$nextTick(() => {
-        this.getSwiper1();
-      });
-    },
-    // 获取履职评议首屏数据
-    async initDataList2() {
-      let data = {
-        pageNum: 1,
-        pageSize: 10,
-        type: 5,
-        sortBy: "createTime",
-        sortType: "desc"
-      };
-      let res = await this.request(
-        `${JUDICIAL_BACKEND}/judicial/activities`,
-        "get",
-        data
-      );
-      this.dataList2 = res.list;
-      this.$nextTick(() => {
-        this.getSwiper2();
-      });
-    }
+    // async initDataList1() {
+    //   let data = {
+    //     pageNum: 1,
+    //     pageSize: 10,
+    //     // type: 2,
+    //     type: 1,
+    //     sortBy: "createTime",
+    //     sortType: "desc"
+    //   };
+    //   let res = await this.request(
+    //     `${JUDICIAL_BACKEND}/judicial/activities`,
+    //     "get",
+    //     data
+    //   );
+    //   this.dataList1 = res.list;
+    //   this.$nextTick(() => {
+    //     this.getSwiper1();
+    //   });
+    // },
+    // // 获取履职评议首屏数据
+    // async initDataList2() {
+    //   let data = {
+    //     pageNum: 1,
+    //     pageSize: 10,
+    //     // type: 5,
+    //     type: 1,
+    //     sortBy: "createTime",
+    //     sortType: "desc"
+    //   };
+    //   let res = await this.request(
+    //     `${JUDICIAL_BACKEND}/judicial/activities`,
+    //     "get",
+    //     data
+    //   );
+    //   this.dataList2 = res.list;
+    //   this.$nextTick(() => {
+    //     this.getSwiper2();
+    //   });
+    // }
   }
 };
 </script>

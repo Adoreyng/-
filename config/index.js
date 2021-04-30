@@ -15,12 +15,14 @@ module.exports = {
         // target:'http://sit.scm.x-chain.net.cn',
         // target:'http://47.100.119.227',
         target:'http://192.168.1.69:8101',
+        // target:'http://192.168.188.28:8101',
+        // target:'http://172.20.10.10:8101',
         changeOrigin: true
       }
     },
 
     // Various Dev Server settings
-    host: '127.0.0.1', // can be overwritten by process.env.HOST 0.0.0.0
+    host: '0.0.0.0', // can be overwritten by process.env.HOST 0.0.0.0
     port: 8888, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,

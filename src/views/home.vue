@@ -15,10 +15,10 @@
         </h1>
         <p class="teday">
           {{time}}
-          <!-- <span>
+          <span>
             <img :src="weatherImg" />
             {{weather || 0}} ℃
-          </span> -->
+          </span>
         </p>
       </div>
       <div class="map">

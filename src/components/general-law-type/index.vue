@@ -13,10 +13,10 @@
         <template v-if="index==0">
           <div class="block-left" v-if="detalistOne.length">
             <p v-for="(sum, index) in detalistOne" :key="index">
-              <span :title="sum.name">{{sum.name}}</span>
-              <span :title="sum.total">{{sum.total}}</span>
-              <!-- <span :title="sum.name">{{sum.title}}</span>
-              <span :title="sum.total">{{sum.number}}</span> -->
+              <!-- <span :title="sum.name">{{sum.name}}</span>
+              <span :title="sum.total">{{sum.total}}</span> -->
+              <span :title="sum.name">{{sum.title}}</span>
+              <span :title="sum.total">{{sum.number}}</span>
             </p>
           </div>
           <div class="block-left" v-else>
@@ -27,10 +27,10 @@
           <div class="block-left" v-if="detalistThree.length">
             <p v-for="(sum, index) in detalistThree" :key="index">
               <!-- detalistThree -->
-              <span :title="sum.name">{{sum.name}}</span>
-              <span :title="sum.total">{{sum.total}}</span>
-              <!-- <span :title="sum.name">{{sum.title}}</span>
-              <span :title="sum.total">{{sum.number}}</span> -->
+              <!-- <span :title="sum.name">{{sum.name}}</span>
+              <span :title="sum.total">{{sum.total}}</span> -->
+              <span :title="sum.name">{{sum.title}}</span>
+              <span :title="sum.total">{{sum.number}}</span>
             </p>
           </div>
           <div class="block-left" v-else>
@@ -65,21 +65,21 @@ export default {
           title: "主题活动"
         }
       ],
-      sum: [],
-      // sum: [
-      //   { title: "社会公共法制", number: "8848" },
-      //   { title: "全民守法情况", number: "7532" },
-      //   { title: "创新项目", number: "6433 " },
-      //   { title: "法制环境情况", number: "3498" },
-      //   { title: "法制城区建设", number: "2034" }
-      // ],
-      // point: [
-      //   { title: "领导干部学法用法情况", number: "6547" },
-      //   { title: "运用新媒体新技术开展普法情况", number: "6548" },
-      //   { title: "政府依法行政情况", number: "6237" },
-      //   { title: "法治宣传教育体制机制建设情况", number: "7501" },
-      //   { title: "民主法治课题研究有关工作情况", number: "3021" }
-      // ],
+      // sum: [],
+      sum: [
+        { title: "社会公共法制", number: "8848" },
+        { title: "全民守法情况", number: "7532" },
+        { title: "创新项目", number: "6433 " },
+        { title: "法制环境情况", number: "3498" },
+        { title: "法制城区建设", number: "2034" }
+      ],
+      point: [
+        { title: "领导干部学法用法情况", number: "6547" },
+        { title: "运用新媒体新技术开展普法情况", number: "6548" },
+        { title: "政府依法行政情况", number: "6237" },
+        { title: "法治宣传教育体制机制建设情况", number: "7501" },
+        { title: "民主法治课题研究有关工作情况", number: "3021" }
+      ],
       detalistOne: [],
       detalistThree: [],
       queryBody: Object.assign({}, defaultQueryBody)
@@ -104,18 +104,18 @@ export default {
         ...this.queryBody
       };
       data.type = val;
-      let res = await this.request(
-        `${JUDICIAL_BACKEND}/judicial/lawUsedCollects`,
-        "get",
-        data
-      );
-      if (val == 0) {
-        this.detalistOne = res.list;
-      } else {
-        this.detalistThree = res.list;
-      }
-      // this.detalistOne = this.point;
-      // this.detalistThree = this.sum;
+      // let res = await this.request(
+      //   `${JUDICIAL_BACKEND}/judicial/lawUsedCollects`,
+      //   "get",
+      //   data
+      // );
+      // if (val == 0) {
+      //   this.detalistOne = res.list;
+      // } else {
+      //   this.detalistThree = res.list;
+      // }
+      this.detalistOne = this.point;
+      this.detalistThree = this.sum;
     }
   }
 };

@@ -82,6 +82,7 @@ export default {
       }
       let res = await this.request(`${JUDICIAL_BACKEND}/judicial/activities`, 'get', data)
       this.infoData = res.list
+      console.log(res)
     }
   },
 }
